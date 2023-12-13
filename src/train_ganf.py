@@ -8,7 +8,7 @@ import numpy as np
 from sklearn.metrics import roc_auc_score
 # from data import fetch_dataloaders
 
-ROOT = "/home/jbuckelew/workspace/AML_Project/"
+ROOT = "/home/jbuckelew/workspace/AML_FinalProject/"
 parser = argparse.ArgumentParser()
 # files
 parser.add_argument('--data_dir', type=str, 

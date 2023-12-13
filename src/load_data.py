@@ -3,12 +3,12 @@ import os
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 
-PATH = "/home/jbuckelew/workspace/AML_Project/datasets/"
+PATH = "/home/jbuckelew/workspace/AML_FinalProject/datasets/"
 
 
 def load_rds(window_size, stride_size, batch_size, num_entities):
     # Collect all the data
-    path = PATH + "fused.csv"
+    path = PATH + "rds.csv"
     #label_path = PATH + "labels.csv"
     df = pd.read_csv(path)
     #labels = pd.read_csv(label_path)
