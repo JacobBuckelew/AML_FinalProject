@@ -159,7 +159,7 @@ if __name__ == "__main__":
         loss_train = []
 
         canf.train()
-        for x, _ in train_loader:
+        for x, _, _ in train_loader:
             x = x.to(device)
             # zero gradients
             optimizer.zero_grad()
@@ -179,7 +179,7 @@ if __name__ == "__main__":
         canf.eval()
         loss_val = []
         with torch.no_grad():
-            for x, _  in val_loader:
+            for x, _, _  in val_loader:
                 x = x.to(device)
                 #loss = -1* canf.estimate_density(x).cpu().numpy()
                 loss =  -1 * canf(x).cpu().numpy()

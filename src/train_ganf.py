@@ -90,7 +90,6 @@ if args.model != 'None':
     print('Load model from '+args.model)
 #%%
 from torch.nn.utils import clip_grad_value_
-import seaborn as sns
 import matplotlib.pyplot as plt
 save_path = ROOT + args.output_dir + "/" + args.name
 print(save_path)
@@ -114,7 +113,7 @@ for _ in range(max_iter):
             loss_train = []
             epoch += 1
             model.train()
-            for x, label in train_loader:
+            for x, label, _ in train_loader:
                 x = x.to(device)
                 #print(x.shape)
 
@@ -135,7 +134,7 @@ for _ in range(max_iter):
             loss_val = []
             val_labels = []
             with torch.no_grad():
-                for x, label in val_loader:
+                for x, label, _ in val_loader:
 
                     x = x.to(device)
                     loss = -model.test(x, A.data).cpu().numpy()
@@ -146,7 +145,7 @@ for _ in range(max_iter):
             loss_test = []
             test_labels = []
             with torch.no_grad():
-                for x, label in test_loader:
+                for x, label, _ in test_loader:
 
                     x = x.to(device)
                     loss = -model.test(x, A.data).cpu().numpy()
@@ -193,7 +192,7 @@ for _ in range(30):
     loss_train = []
     epoch += 1
     model.train()
-    for x, label in train_loader:
+    for x, label, _ in train_loader:
         x = x.to(device)
         optimizer.zero_grad()
         loss = -model(x, A)
@@ -211,7 +210,7 @@ for _ in range(30):
     loss_val = []
     val_labels = []
     with torch.no_grad():
-        for x, label in val_loader:
+        for x, label, _ in val_loader:
 
             x = x.to(device)
             loss = -model.test(x, A.data).cpu().numpy()
@@ -222,7 +221,7 @@ for _ in range(30):
     loss_test = []
     test_labels = []
     with torch.no_grad():
-        for x, label in test_loader:
+        for x, label, _ in test_loader:
 
             x = x.to(device)
             loss = -model.test(x, A.data).cpu().numpy()

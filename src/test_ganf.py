@@ -59,7 +59,7 @@ model.eval()
 loss_test = []
 labels = []
 with torch.no_grad():
-    for x, label in test_loader:
+    for x, label, _ in test_loader:
 
         x = x.to(device)
         loss = -model.test(x, A.data).cpu().numpy()
