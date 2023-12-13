@@ -1,0 +1,9 @@
+{
+    "window_size": 3,
+    "lr": 1e-3,
+    "epochs": 50,
+    "batch_size": 32,
+    "num_blocks": 4,
+    "st_units": 32,
+    "st_layers": 1
+}

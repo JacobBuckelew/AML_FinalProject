@@ -1,0 +1,11 @@
+python train_CANF.py\
+        --seed=7\
+        --b_norm=True\
+        --model=NF\
+        --gpu=0\
+        --window_size=3\
+        --epochs=50\
+        --num_blocks=4\
+        --st_units=32\
+        --context=0\
+        --entities=10\
