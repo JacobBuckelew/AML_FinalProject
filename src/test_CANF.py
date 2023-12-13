@@ -10,7 +10,7 @@ import argparse
 import os
 import matplotlib.pyplot as plt
 
-ROOT = "/home/jbuckelew/workspace/AML_Project/"
+ROOT = "/home/jbuckelew/workspace/AML_FinalProject/"
 
 
 def plot_densities(densities, name=None):
