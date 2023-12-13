@@ -14,7 +14,7 @@ It's recommended to setup a new conda environment with python 3.11.
 
 2. Ensure the ROOT Path located at the top of the scripts `load_data.py` , `train_CANF.py` , `test_CANF.py`, `train_ganf.py`, and `test_ganf.py` are set correctly. 
 
-3. Run the shell files located in [/src] to train and test each model:
+3. Run the shell files located in [src](./src) to train and test each model:
 
     ```shell
     ./train.sh

@@ -8,7 +8,7 @@ import numpy as np
 from sklearn.metrics import roc_auc_score
 # from data import fetch_dataloaders
 
-ROOT = "/home/jbuckelew/workspace/AML_Project"
+ROOT = "/home/jbuckelew/workspace/AML_FinalProject"
 
 parser = argparse.ArgumentParser()
 # files
@@ -22,7 +22,6 @@ parser.add_argument('--model', type=str, default='None')
 parser.add_argument('--seed', type=int, default=7, help='Random seed to use.')
 # made parameters
 parser.add_argument('--n_blocks', type=int, default=6, help='Number of blocks to stack in a model (MADE in MAF; Coupling+BN in RealNVP).')
-parser.add_argument('--n_components', type=int, default=1, help='Number of Gaussian clusters for mixture of gaussians models.')
 parser.add_argument('--hidden_size', type=int, default=32, help='Hidden layer size for MADE (and each MADE block in an MAF).')
 parser.add_argument('--n_hidden', type=int, default=1, help='Number of hidden layers in each MADE.')
 parser.add_argument('--batch_norm', type=bool, default=False)
