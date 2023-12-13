@@ -36,6 +36,9 @@ And 4 test files:
 
     - `test_nocontext.sh`: tests NF
 
+For Plotting,
+    - `plotting.ipynb`: plots RDS results and generates speed heatmaps and densities around incidents
+
     - `test_ganf.sh`: tests GANF
 
     - `test_rds.sh` : test our approach on rds
